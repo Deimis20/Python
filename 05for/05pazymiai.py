@@ -1,4 +1,4 @@
-
+# dalinai veikia
 n = int(input('Kiek petriukas turi pazymiu...'))
 suma = 0
 for i in range(1, n+1):
