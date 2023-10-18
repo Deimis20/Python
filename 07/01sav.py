@@ -6,9 +6,9 @@ for i in range (int((viniesIlgis/kalGylis)+1)):
         viniesIlgis = viniesIlgis - kalGylis
         smugis += 1
         if viniesIlgis > 0:
-            print(f'Tuk!{smugis} smugis, {round(viniesIlgis,2)} liko neikaltos')
+            print(f'Tuk! {smugis} smugis, {round(viniesIlgis,2)} liko neikaltos')
         else:
-            print(f'Tuk!{smugis} smugis, vinis ikalta.')
+            print(f'Tuk! {smugis} smugis, vinis ikalta.')
             break
 
     

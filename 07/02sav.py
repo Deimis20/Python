@@ -1,10 +1,10 @@
 kiek=0
 for i in range(1000,10000):
-    pirmi_du=i//100
-    paskutiniai_du=i%100
-    suma_dvieju=pirmi_du+paskutiniai_du
-    kvadratas_dvieju=suma_dvieju**2
-    if kvadratas_dvieju==i:
+    du=i//100
+    pdu=i%100
+    suma=du+pdu
+    kdu=suma**2
+    if kdu==i:
         print(i,end=(', '))
         kiek+=1
-print(f'ju yra {kiek}')
+print(f'yra {kiek} skaiciai.')
