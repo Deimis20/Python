@@ -26,8 +26,8 @@ head.direction = "Stop"
  
 # food in the game
 food = turtle.Turtle()
-colors = random.choice(['yellow', 'green', 'black'])
-shapes = random.choice(['square', 'triangle', 'circle'])
+colors = random.choice(['green', 'yellow', 'black'])
+shapes = random.choice(['circle', 'triangle', 'square'])
 food.speed(0)
 food.shape(shapes)
 food.color(colors)

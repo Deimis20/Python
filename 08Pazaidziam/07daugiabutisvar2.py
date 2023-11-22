@@ -1,0 +1,67 @@
+import turtle
+def DrawSquare(height, width):
+    t.left(90)
+    t.forward(height)
+    t.left(90)
+    t.forward(width)
+    t.left(90)
+    t.forward(height)
+    t.left(90)
+    t.forward(width)
+def DrawBuilding(height, width, color, windowColumns, windowRows):
+    t.pencolor(color)
+    t.fillcolor(color)
+    #drawing building
+    t.begin_fill()
+    DrawSquare(height, width)
+    t.end_fill()
+    t.penup()
+    t.pencolor('black')
+    windowWidth = width / (windowColumns + windowColumns - 1 + 2)
+    windowHeight = height / (1 + (4 / 3 * windowRows))
+    t.left(90)
+    t.forward(windowHeight*1/3)
+    t.right(90)
+    for row in range(windowRows):
+        DrawRowOfWindows(windowColumns, windowWidth, windowHeight)
+        t.left(90)
+        t.forward(windowHeight * 4/3) #gap between floors is 1/3 of a window
+        t.right(90)     
+def DrawRowOfWindows(windowColumns, windowWidth, windowHeight):
+    for row in range(windowColumns):
+        t.backward(windowWidth)
+        t.pendown()
+        DrawWindow(windowHeight, windowWidth)
+        t.penup()
+        t.backward(windowWidth)
+    #after drawing row of windows have to return to starting position
+    t.penup()
+    t.forward(windowWidth * windowColumns * 2)
+def DrawWindow(height, width):
+    t.pencolor('black')
+    DrawSquare(height, width)
+    t.penup()
+    t.left(90)
+    t.forward(height*2/3)
+    t.pendown()
+    t.left(90)
+    t.forward(width)
+    t.backward(width/2)
+    t.left(90)
+    t.forward(height*2/3)
+    t.left(90)
+    t.forward(width/2)
+s = turtle.Screen()
+t = turtle.Turtle()
+t.penup()
+t.goto(400, -300)
+t.speed(0)
+t.pendown()
+# building params
+buildingColor = 'red'
+buldingHeight = int(turtle.textinput("User Input", "Building height:"))
+buildingWidth = int(turtle.textinput("User Input", "Building width:"))
+buildingWindowsColumns = int(turtle.textinput("User Input", "How many windows in storey?:"))
+buildingWindowsInRow = int(turtle.textinput("User Input", "How many floors?:"))
+DrawBuilding(buldingHeight, buildingWidth, 'red', buildingWindowsColumns, buildingWindowsInRow)
+s.exitonclick()

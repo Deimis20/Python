@@ -12,4 +12,16 @@ print(m)
 m[2] = 99999
 print(b)
 print(m)
+print(id(a))
+print(id(m))
+
+b = m[::]   # Sukuriam masyvo kopija
+print(id(b))
+
+# m = 5
+# print(m)
+# print(a)
+
+c = m.copy()
+
 
