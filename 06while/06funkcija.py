@@ -8,5 +8,5 @@ def atvir(skaicius):
     
 sk = int(input('Iveskite skaiciu...'))
 sumaKita = atvir(sk)
-print(f'Skaiciaus {sk} perrasius atcirksciai = {sumaKita}')
+print(f'Skaiciaus {sk} perrasius atvirksciai = {sumaKita}')
 
