@@ -14,7 +14,6 @@ def zaidimas():
     generuotas_skaicius = random.randint(1, n)
     spejimu_skaicius = 0
     zaidimai = 1
-    skaicius = skaicius
 
     while True:
         spejimas = int(input(f"Atspekite sugeneruota skaiciu (nuo 1 iki {n}): "))
@@ -42,10 +41,8 @@ def zaidimas():
         rasom1(f'I klausima "Ar norite zaisti dar karta?" buvo atsakyta "T"')
         zaidimas()
         zaidimai += 1
-        zaidimai = skaicius
     else:
         zaidimai += 1
-        zaidimai = skaicius
         print("Aciu uz zaidima.")
         print(f'Buvo suzaista {zaidimai} kartu')
         rasom1(f'I klausima "Ar norite zaisti dar karta?" buvo atsakyta "N"')
